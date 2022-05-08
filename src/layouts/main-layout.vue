@@ -430,7 +430,7 @@ export default {
 .intro-text{
 
   opacity: 1;
-  z-index: 99999;
+  z-index: 1;
   position: absolute;
   top: 50%;
   right: 50%;
