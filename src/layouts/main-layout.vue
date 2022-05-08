@@ -2,8 +2,7 @@
   <q-layout view="lHr lpR lFr " >
 
 
-
-      <q-header bordered class="bg-primary row justify-between shadow-8  "
+      <q-header bordered class="bg-dark row justify-between shadow-8 items-center "
       reveal
       reveal-offset="100">
         <div>
@@ -12,26 +11,53 @@
         </q-toolbar>
         </div>
 
-        <div class="row nav" style="gap:10px" > 
+        <div class="row nav items-center" style="gap:10px" > 
           <q-tabs class="q-pt-sm q-pb-sm q-mr-lg row" >
-              <div class="row item text-white" style="padding-right:10px ">
+              <div class="row item text-white items-center" style="padding-right:10px ">
                 <q-route-tab to="/page1" label="Home" />
                 <q-route-tab to="/page2" label="Products" />
                 <q-route-tab to="/page3" label="Contact" />
                 <q-route-tab to="/page4" label="About us"  />
+ 
+                <div class="q-pa-sm q-gutter-sm">
+                  <q-btn round color="primary" icon="shopping_cart" />
+                </div>
+                
               
               </div>
           </q-tabs>
         </div>
 
       </q-header>
-    
+      
+      
 
       <q-layout
         class="q-layout--main  "
         style="min-height: auto ">
           <q-page-container>   
-              <q-page class="q-mt-xl q-pa-xl">
+           <q-layout>
+            <div class="bg-dark shadow-5 ">
+              
+                  <h2 class="intro-text text-white q-pa-xl" >
+                    <q class="text-dark "><span class="text-white q-ml-md">Technology is best <span class="q-ml-xl">when it <span class="text-dark">brings</span></span> <span class="q-ml-xl">people together.</span></span></q>
+                  </h2>
+             
+              <div class="intro-bg ">
+                
+              </div>
+              
+            </div>
+          </q-layout>
+           
+            
+          <q-separator></q-separator>
+
+        
+    
+              <q-page class="q-pa-sm">
+                <div class="q-gutter-md row items-start">
+                </div>
                 <div class="q-pa-xl q-ma-xl">
                   <div class="row q-pa-xl justify-center full-height full-width text-center  ">
                     
@@ -234,6 +260,8 @@
                           </q-card> -->
                         </div>        
                       </div>
+
+                      <q-separator></q-separator>
                         
                             
                         
@@ -386,7 +414,7 @@ export default {
       expanded: ref(false),
       lorem: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
       slide: ref(1),
-      autoplay: ref(true)
+      autoplay: ref(true),
       
     }
   },
@@ -399,9 +427,35 @@ export default {
 
 <style>
 
-.best-of-3{
-  color: orange
+.intro-text{
+
+  opacity: 1;
+  z-index: 99999;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(0%, -50%);
+  text-transform: uppercase;
+  
 }
+
+
+.intro-bg{
+  width: 100%;
+  height: 100vh;
+  background: url(../assets/header-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.6;
+
+}
+
+.intro-text{
+  position: absolute;
+  
+}
+
+
 
 .read-more-downkey{
   position: absolute;
@@ -424,13 +478,7 @@ q-card{
   text-transform: none;
 }
 
-.bg-image {
-    margin-top: -50px;
-    background-image: url(https://mcdn.wallpapersafari.com/medium/35/83/lG06Zo.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    opacity: 0.9;
-  }
+
 
   .q-header .q-tab__content, .q-footer .q-tab__content {
     /* min-width: 128px; */
@@ -446,8 +494,5 @@ body.desktop .q-focus-helper{
   z-index: 1;
 }
 
-.q-dialog__backdrop
-  {
-    backdrop-filter: blur(2px);
-  }
+
 </style>
