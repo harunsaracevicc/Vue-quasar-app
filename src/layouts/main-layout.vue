@@ -39,7 +39,7 @@
            <q-layout>
             <div class="bg-dark shadow-5 ">
               
-                  <h2 class="intro-text text-white q-pa-xl" >
+                  <h2 class="intro-text text-white q-pa-xl shadow-15  bg-transparent " >
                     <q class="text-dark "><span class="text-white q-ml-md">Technology is best <span class="q-ml-xl">when it <span class="text-dark">brings</span></span> <span class="q-ml-xl">people together.</span></span></q>
                   </h2>
              
@@ -53,8 +53,6 @@
             
           <q-separator></q-separator>
 
-        
-    
               <q-page class="q-pa-sm">
                 <div class="q-gutter-md row items-start">
                 </div>
@@ -68,11 +66,12 @@
                                   <q-img
                                     src="../assets/iphone13promax.png"
                                   />
+                                  
 
                                       <q-card-section class="row justify-center " style="gap:10px">
                                         
                                         <div class="text-overline text-orange-9">White</div>
-                                        <div class="text-h5 q-mt-sm q-mb-xs">Iphone 13 Pro Max</div>
+                                        <div class="text-h6 q-mt-sm q-mb-xs">Iphone 13 Pro Max</div>
                                         <q-btn color="primary" label="Add to cart" outline ></q-btn>
                                         
                                       </q-card-section>
@@ -108,10 +107,11 @@
                                             src="../assets/iphone12promax.png"
                                           />
 
+
                                               <q-card-section class="row justify-center " style="gap:10px">
                                                 
                                                 <div class="text-overline text-orange-9">Black</div>
-                                                <div class="text-h5 q-mt-sm q-mb-xs">Iphone 12 Pro Max</div>
+                                                <div class="text-h6 q-mt-sm q-mb-xs">Iphone 12 Pro Max</div>
                                                 <q-btn color="primary" label="Add to cart" outline ></q-btn>
                                                 
                                               </q-card-section>
@@ -121,6 +121,7 @@
                                                   <q-btn flat color="grey" label="Read more" />
 
                                                   <q-btn
+                                                  
                                                   class="read-more-downkey"
                                                     color="grey"
                                                     round
@@ -147,11 +148,13 @@
                                             src="../assets/iphone13promax.png"
                                           />
 
+                                                
                                               <q-card-section class="row justify-center " style="gap:10px">
                                                 
                                                 <div class="text-overline text-orange-9">White</div>
-                                                <div class="text-h5 q-mt-sm q-mb-xs">Iphone 13 Pro Max</div>
+                                                <div class="text-h6 q-mt-sm q-mb-xs">Iphone 13 Pro Max</div>
                                                 <q-btn color="primary" label="Add to cart" outline ></q-btn>
+                                                
                                                 
                                               </q-card-section>
 
@@ -427,6 +430,7 @@ export default {
 
 <style>
 
+
 .intro-text{
 
   opacity: 1;
@@ -452,8 +456,8 @@ export default {
 
 .intro-text{
   position: absolute;
-  
 }
+
 
 
 
