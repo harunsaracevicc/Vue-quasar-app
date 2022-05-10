@@ -15,7 +15,7 @@
           <q-tabs class="q-pt-sm q-pb-sm q-mr-lg row" >
               <div class="row item text-white items-center" style="padding-right:10px ">
                 <q-route-tab to="/page1" label="Home" />
-                <q-route-tab to="/page2" label="Products" />
+                <q-route-tab to="/products" label="Products" />
                 <q-route-tab to="/page3" label="Contact" />
                 <q-route-tab to="/page4" label="About us"  />
  
@@ -62,8 +62,10 @@
                       <div>
                         <h2 class="text-dark">Bestseller</h2>
                         <div class="row justify-between" style="gap: 80px 30px">
+
                           <q-card class="my-card shadow-5 row"  bordered>
                                   <q-img
+                                  class="q-mt-xs"
                                     src="../assets/iphone13promax.png"
                                   />
                                   
@@ -144,16 +146,23 @@
                           </q-card>
 
                           <q-card class="my-card shadow-5 row"  bordered>
-                                          <q-img
-                                            src="../assets/iphone13promax.png"
+                                          <q-img 
+                                            class="q-mt-sm"
+                                            src="../assets/iphone11promax.png"
                                           />
 
                                                 
                                               <q-card-section class="row justify-center " style="gap:10px">
                                                 
-                                                <div class="text-overline text-orange-9">White</div>
-                                                <div class="text-h6 q-mt-sm q-mb-xs">Iphone 13 Pro Max</div>
-                                                <q-btn color="primary" label="Add to cart" outline ></q-btn>
+                                                <div class="text-overline text-orange-9" style="min-width:100%">Grey</div>
+                                                <div class="text-h6 q-mt-sm q-mb-xs " > Iphone 11 Pro Max</div>
+                                                <q-btn
+                                                  
+                                                  color="primary"
+                                                  label="Add to cart"
+                                                  outline
+                                                  
+                                                  ></q-btn>
                                                 
                                                 
                                               </q-card-section>
@@ -183,215 +192,22 @@
                                                 </div>
                                               </q-slide-transition>
                           </q-card>
-                                  
-                          <!-- <q-card class="my-card shadow-5 row"  bordered>
-                                          <q-img class="q-mt-sm"
-                                            src="../assets/iphone12promax.png"
-                                          />
 
-                                              <q-card-section class="row justify-center " style="gap:10px">
-                                                
-                                                <div class="text-overline text-orange-9">Black</div>
-                                                <div class="text-h5 q-mt-sm q-mb-xs">Iphone 12 Pro Max</div>
-                                                <q-btn color="primary" label="Add to cart" outline ></q-btn>
-                                                
-                                              </q-card-section>
-
-                                              <q-card-actions class="row item-between">
-                                                
-                                                  <q-btn flat color="grey" label="Read more" />
-
-                                                  <q-btn
-                                                  class="read-more-downkey"
-                                                    color="grey"
-                                                    round
-                                                    flat
-                                                    dense
-                                                    :icon="expanded ? 'keyboard_arrow_up' : 'keyboard_arrow_down'"
-                                                    @click="expanded = !expanded"
-                                                  />
-                                              
-                                              </q-card-actions>
-
-                                              <q-slide-transition>
-                                                <div v-show="expanded">
-                                                  <q-separator />
-                                                  <q-card-section class="text-subitle2">
-                                                    {{ lorem }}
-                                                  </q-card-section>
-                                                </div>
-                                              </q-slide-transition>
-                          </q-card>
-
-                          <q-card class="my-card shadow-5 row"  bordered>
-                                <q-img
-                                  src="../assets/iphone13promax.png"
-                                />
-
-                                    <q-card-section class="row justify-center " style="gap:10px">
-                                      
-                                      <div class="text-overline text-orange-9">White</div>
-                                      <div class="text-h5 q-mt-sm q-mb-xs">Iphone 13 Pro Max</div>
-                                      <q-btn color="primary" label="Add to cart" outline ></q-btn>
-                                      
-                                    </q-card-section>
-
-                                    <q-card-actions class="row item-between">
-                                      
-                                        <q-btn flat color="grey" label="Read more" />
-
-                                        <q-btn
-                                        class="read-more-downkey"
-                                          color="grey"
-                                          round
-                                          flat
-                                          dense
-                                          :icon="expanded ? 'keyboard_arrow_up' : 'keyboard_arrow_down'"
-                                          @click="expanded = !expanded"
-                                        />
-                                    
-                                    </q-card-actions>
-
-                                    <q-slide-transition>
-                                      <div v-show="expanded">
-                                        <q-separator />
-                                        <q-card-section class="text-subitle2">
-                                          {{ lorem }}
-                                        </q-card-section>
-                                      </div>
-                                    </q-slide-transition>
-                          </q-card> -->
                         </div>        
                       </div>
 
                       <q-separator></q-separator>
                         
-                            
-                        
-
-                        <!-- <q-card class="my-card shadow-5 row"  bordered>
-                                        <q-img class="q-mt-sm"
-                                          src="../assets/iphone12promax.png"
-                                        />
-
-                                            <q-card-section class="row justify-center " style="gap:10px">
-                                              
-                                              <div class="text-overline text-orange-9">Black</div>
-                                              <div class="text-h5 q-mt-sm q-mb-xs">Iphone 12 Pro Max</div>
-                                              <q-btn color="primary" label="Add to cart" outline ></q-btn>
-                                              
-                                            </q-card-section>
-
-                                            <q-card-actions class="row item-between">
-                                              
-                                                <q-btn flat color="grey" label="Read more" />
-
-                                                <q-btn
-                                                class="read-more-downkey"
-                                                  color="grey"
-                                                  round
-                                                  flat
-                                                  dense
-                                                  :icon="expanded ? 'keyboard_arrow_up' : 'keyboard_arrow_down'"
-                                                  @click="expanded = !expanded"
-                                                />
-                                            
-                                            </q-card-actions>
-
-                                            <q-slide-transition>
-                                              <div v-show="expanded">
-                                                <q-separator />
-                                                <q-card-section class="text-subitle2">
-                                                  {{ lorem }}
-                                                </q-card-section>
-                                              </div>
-                                            </q-slide-transition>
-                                    </q-card>
-
-                                      <q-card class="my-card shadow-5 row"  bordered>
-                                        <q-img
-                                          src="../assets/iphone13promax.png"
-                                        />
-
-                                            <q-card-section class="row justify-center " style="gap:10px">
-                                              
-                                              <div class="text-overline text-orange-9">White</div>
-                                              <div class="text-h5 q-mt-sm q-mb-xs">Iphone 13 Pro Max</div>
-                                              <q-btn color="primary" label="Add to cart" outline ></q-btn>
-                                              
-                                            </q-card-section>
-
-                                            <q-card-actions class="row item-between">
-                                              
-                                                <q-btn flat color="grey" label="Read more" />
-
-                                                <q-btn
-                                                class="read-more-downkey"
-                                                  color="grey"
-                                                  round
-                                                  flat
-                                                  dense
-                                                  :icon="expanded ? 'keyboard_arrow_up' : 'keyboard_arrow_down'"
-                                                  @click="expanded = !expanded"
-                                                />
-                                            
-                                            </q-card-actions>
-
-                                            <q-slide-transition>
-                                              <div v-show="expanded">
-                                                <q-separator />
-                                                <q-card-section class="text-subitle2">
-                                                  {{ lorem }}
-                                                </q-card-section>
-                                              </div>
-                                            </q-slide-transition>
-                                    </q-card>
-                                    
-                                    <q-card class="my-card shadow-5 row"  bordered>
-                                        <q-img class="q-mt-sm"
-                                          src="../assets/iphone12promax.png"
-                                        />
-
-                                            <q-card-section class="row justify-center " style="gap:10px">
-                                              
-                                              <div class="text-overline text-orange-9">Black</div>
-                                              <div class="text-h5 q-mt-sm q-mb-xs">Iphone 12 Pro Max</div>
-                                              <q-btn color="primary" label="Add to cart" outline ></q-btn>
-                                              
-                                            </q-card-section>
-
-                                            <q-card-actions class="row item-between">
-                                              
-                                                <q-btn flat color="grey" label="Read more" />
-
-                                                <q-btn
-                                                class="read-more-downkey"
-                                                  color="grey"
-                                                  round
-                                                  flat
-                                                  dense
-                                                  :icon="expanded ? 'keyboard_arrow_up' : 'keyboard_arrow_down'"
-                                                  @click="expanded = !expanded"
-                                                />
-                                            
-                                            </q-card-actions>
-
-                                            <q-slide-transition>
-                                              <div v-show="expanded">
-                                                <q-separator />
-                                                <q-card-section class="text-subitle2">
-                                                  {{ lorem }}
-                                                </q-card-section>
-                                              </div>
-                                            </q-slide-transition>
-                                    </q-card> -->
-                              
-                              
+             
                   </div>
                 </div>
               </q-page>
           </q-page-container>
       </q-layout>
+
+<q-separator></q-separator>
+
+ 
 
 
   </q-layout>
@@ -405,27 +221,24 @@ import { ref } from 'vue'
 
 
 export default {
+
   setup () {
    
-
     return {
-      small: ref(false),
-      mediumlog: ref(false),
-      mediumreg: ref(false),
-      fullWidth: ref(false),
-      fullHeight: ref(false),
-      expanded: ref(false),
-      lorem: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-      slide: ref(1),
-      autoplay: ref(true),
-      
+        small: ref(false),
+        mediumlog: ref(false),
+        mediumreg: ref(false),
+        fullWidth: ref(false),
+        fullHeight: ref(false),
+        expanded: ref(false),
+        lorem: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        slide: ref(1),
+        autoplay: ref(true),
     }
   },
-
-
-
-
 }
+
+ 
 </script>
 
 <style>
