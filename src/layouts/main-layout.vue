@@ -14,7 +14,7 @@
         <div class="row nav items-center" style="gap:10px" > 
           <q-tabs class="q-pt-sm q-pb-sm q-mr-lg row" >
               <div class="row item text-white items-center" style="padding-right:10px ">
-                <q-route-tab to="/home" label="Home" />
+                <q-route-tab to="/page1" label="Home" />
                 <q-route-tab to="/products" label="Products" />
                 <q-route-tab to="/page3" label="Contact" />
                 <q-route-tab to="/page4" label="About us"  />
