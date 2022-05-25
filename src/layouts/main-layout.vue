@@ -20,8 +20,24 @@
                 <q-route-tab to="/page4" label="About us"  />
  
                 <div class="q-pa-sm q-gutter-sm">
-                  <q-btn round color="primary" icon="shopping_cart" />
+                  
+                  <q-btn-dropdown rounded color="primary" icon="shopping_cart"  >
+                    
+                    
+                  
+                    <q-list>
+                      <q-item clickable v-close-popup @click="onItemClick">
+                        <q-item-section>
+                          <q-item-label>Photos</q-item-label>
+                        </q-item-section>
+                      </q-item>
+                    </q-list>
+                  </q-btn-dropdown>
+                  <q-badge color="red" text-color="black" >{{count}} </q-badge>
+
+                  
                 </div>
+                  
                 
               
               </div>
@@ -74,7 +90,7 @@
                                         
                                         <div class="text-overline text-orange-9">White</div>
                                         <div class="text-h6 q-mt-sm q-mb-xs">Iphone 13 Pro Max</div>
-                                        <q-btn color="primary" label="Add to cart" outline ></q-btn>
+                                        <q-btn @click="cartCount" color="primary" label="Add to cart" outline ></q-btn>
                                         
                                       </q-card-section>
 
@@ -114,7 +130,7 @@
                                                 
                                                 <div class="text-overline text-orange-9">Black</div>
                                                 <div class="text-h6 q-mt-sm q-mb-xs">Iphone 12 Pro Max</div>
-                                                <q-btn color="primary" label="Add to cart" outline ></q-btn>
+                                                <q-btn @click="cartCount" color="primary" label="Add to cart" outline ></q-btn>
                                                 
                                               </q-card-section>
 
@@ -157,7 +173,7 @@
                                                 <div class="text-overline text-orange-9" style="min-width:100%">Grey</div>
                                                 <div class="text-h6 q-mt-sm q-mb-xs " > Iphone 11 Pro Max</div>
                                                 <q-btn
-                                                  
+                                                  @click="cartCount"
                                                   color="primary"
                                                   label="Add to cart"
                                                   outline
@@ -219,29 +235,52 @@
 import { ref } from 'vue'
 
 
-
 export default {
 
-  setup () {
+  data () {
    
-    return {
-        small: ref(false),
-        mediumlog: ref(false),
-        mediumreg: ref(false),
-        fullWidth: ref(false),
-        fullHeight: ref(false),
-        expanded: ref(false),
-        lorem: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        slide: ref(1),
-        autoplay: ref(true),
+      return {
+          
+          small: ref(false),
+          mediumlog: ref(false),
+          mediumreg: ref(false),
+          fullWidth: ref(false),
+          fullHeight: ref(false),
+          expanded: ref(false),
+          lorem: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+          slide: ref(1),
+          autoplay: ref(true),
+          count: 0,
+          onItemClick () {
+        // console.log('Clicked on an Item')
+      }
+      }
+  },
+
+ 
+
+  methods: {
+
+    cartCount(){
+
+      this.count++
     }
   },
+
+  mounted() {
+    
+    // this.$q.iconSet.arrow.dropdown = ""
+    
+  }
+
+
 }
 
  
 </script>
 
 <style>
+
 
 
 .intro-text{
